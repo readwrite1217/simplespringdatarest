@@ -1,5 +1,6 @@
 package com.example.simplespringcrud.service;
 
+import com.example.simplespringcrud.Exception.EmployeeNotFoundException;
 import com.example.simplespringcrud.repository.EmployeeRepository;
 import com.example.simplespringcrud.model.Employee;
 import org.springframework.stereotype.Service;
@@ -24,9 +25,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee findById(int id) {
         Employee e = null;
-        Optional<Employee> result  =employeeRepository.findById(id);
-        if (result.isPresent()){
+        Optional<Employee> result = employeeRepository.findById(id);
+        if (result.isPresent()) {
             e = result.get();
+        } else {
+            throw new EmployeeNotFoundException("Employee Id Not found");
         }
         return e;
     }
