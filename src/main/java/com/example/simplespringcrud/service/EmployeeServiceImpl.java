@@ -1,10 +1,8 @@
 package com.example.simplespringcrud.service;
 
-import com.example.simplespringcrud.dao.EmployeeRepository;
+import com.example.simplespringcrud.repository.EmployeeRepository;
 import com.example.simplespringcrud.model.Employee;
-import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.Optional;

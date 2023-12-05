@@ -1,4 +1,4 @@
-package com.example.simplespringcrud.dao;
+package com.example.simplespringcrud.repository;
 
 import com.example.simplespringcrud.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
